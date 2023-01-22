@@ -1,10 +1,20 @@
-@import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-#app {
-  /* max-width: 1280px; */
-  margin: 0 auto;
-  /* padding: 2rem; */
-  font-weight: normal;
+/* 600: '#475569',
+700: '#334155',
+800: '#1e293b',
+900: '#0f172a' */
+
+#root{
+  --border-black: #475569;
+}
+
+  #app{
+    font-family: 'Favorit';
+    font-size: 1vw;
+    color: black;
 }
 
 a,
@@ -21,16 +31,46 @@ a,
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-    /* overflow-x: hidden; */
+@font-face {
+    font-family: "Dugas";
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+    unicode-range: U+000-5FF;
+    src: local("Dugas"), 
+    url("../fonts/Ddugas/dugas.woff2") format("woff2"),
+    url("../fonts/Dugas/dugas.ttf") format("truetype");
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr ;
-    /* padding: 0 2rem; */
+  @font-face {
+    font-family: "Favorit-bold";
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+    unicode-range: U+000-5FF;
+    src: local("Favorit-bold"), 
+    url("../fonts/Favorit/favorit_bold.woff2") format("woff2"),
+    url("../fonts/Favorit/favorit_bold.ttf") format("truetype");
   }
-}
+
+  @font-face {
+    font-family: "Favorit";
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+    unicode-range: U+000-5FF;
+    src: local("Favorit"), 
+    url("../fonts/Favorit/favorit.woff2") format("woff2"),
+    url("../fonts/Favorit/favorit.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Favorit-mono";
+    font-weight: 400;
+    font-style: normal;
+    font-display: auto;
+    unicode-range: U+000-5FF;
+    src: local("Favorit-mono"), 
+    url("../fonts/Favorit/favorit_mono.woff2") format("woff2"),
+    url("../fonts/Favorit/favorit_mono.ttf") format("truetype");
+  }
