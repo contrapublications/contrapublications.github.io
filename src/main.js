@@ -18,3 +18,5 @@ app.mount('#app')
 
 // if pinia is remove used this init
 // createApp(App).mount('#app')
+
+// somthing
