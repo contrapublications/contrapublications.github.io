@@ -4,35 +4,6 @@
 
 <template>
 
-  <!-- <div class="grid grid-cols-10 grid-rows-3 w-full m-0 p-0">
-
-    <div class="col-span-3 row-span-3">
-      <pre
-        class="font-favorit-bold leading-tight border-gray-600 border-2 text-left text-base"
-      >
-Monocultrue 
-is 
-Dead
-      </pre>
-    </div>
-
-    <div class="col-span-5 row-span-3 border-gray-600 border-2 self-end">
-      <Menu />
-    </div>
-
-    <div class="w-10 border-gray-600 border-2">3</div>
-
-    <div class=" border-gray-600 border-2 col-start-10 row-start-2 self-center h-30">
-      <span class="text-xs">dark</span>
-      <label class="switch">
-        <input type="checkbox" />
-        <span class="slider"></span>
-      </label>
-      
-    </div>
-
-
-  </div> -->
 
   <div class="m-0 grid w-full grid-cols-10 grid-rows-3 p-0">
     <div class="col-span-1 row-span-3">

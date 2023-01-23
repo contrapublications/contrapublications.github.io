@@ -13,9 +13,18 @@
 
   const date = ref(` ${cDay}.${cMonth}.${cYear}`);
   const time = ref(` ${cHours}:${cMinutes}:${cSeconds}`);
+
+// const emit = defineEmits(['darkMode'])
+// emit('darkMode', colorMode)
+
+  const colorMode = ref(false)
+
 </script>
 
 <template>
+  <div class="text-2xl">
+    {{ colorMode }}
+  </div>
 
 <div class="h-fulll flex w-full flex-col ">
 
@@ -29,9 +38,7 @@
       <div class="mr-10 font-favorit-mono text-sm">
         {{ date }}
       </div>
-      <Slider class="mr-10">
-        <Slider />
-      </Slider>
+      <Slider class="mr-10" @darkMode="(msg) => colorMode = msg"></Slider>
     </div>
   </div>
 

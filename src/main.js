@@ -1,7 +1,7 @@
-import { createApp } from 'vue'
+import { ref, createApp, getCurrentInstance } from 'vue'
 import App from './App.vue'
-// import App from './components/Header/Header.vue'
 // import App from './Test.vue'
+// import App from './components/Header/Header.vue'
 
 // import App from './components/MenuInfoBlock/DateTimeSlider.vue'
 // import App from './components/MenuInfoBlock/Publications.vue'

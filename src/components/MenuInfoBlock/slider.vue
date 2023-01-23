@@ -1,20 +1,38 @@
-// https://www.w3schools.com/howto/howto_css_switch.asp
-<script setup></script>
+<script setup>
+  import { ref } from "vue";
+
+  const emit = defineEmits(['darkMode'])
+  const darkModeToggle = ref(true);
+  
+  function toggle() {
+    darkModeToggle.value = !darkModeToggle.value;
+  }
+
+  emit('darkMode', darkModeToggle)
+
+</script>
 
 <template>
-  <div class="m-0 grid h-11 grid-rows-3 p-0 ">
+  <div class="text-2xl">
+    {{ darkModeToggle }}
+  </div>
 
-    <div class="w-20 m-0 flex p-0 place-content-center">
+  <div class="m-0 grid h-11 grid-rows-3 p-0">
+    <div class="m-0 flex w-20 place-content-center p-0">
       <div>
         <label class="switch">
-          <input type="checkbox" />
+          <input type="checkbox" @click="toggle" />
           <span class="slider"></span>
         </label>
       </div>
     </div>
-
-    <div class="w-20 m-0 flex p-1 place-content-center  text-left font-favorit-bold text-base text-slate-700">Dark</div>
   </div>
+
+  <div class="m-0 flex w-20 place-content-center p-1 text-left font-favorit-bold text-base text-slate-700">
+    <div v-if="darkModeToggle">Light</div>
+    <div v-else>Dark</div>
+  </div>
+
 </template>
 
 <style scoped>
@@ -41,7 +59,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: rgb(117, 117, 117);
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
@@ -59,7 +77,7 @@
   }
 
   input:checked + .slider {
-    background-color: #2196f3;
+    background-color: #000000;
   }
 
   input:focus + .slider {

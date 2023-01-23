@@ -5,12 +5,17 @@
   import Articles from "./components/Articles/Articles.vue";
   import Campaigns from "./components/Campaigns/Campaigns.vue";
   import Footer from "./components/Footer.vue";
+
 </script>
 
 <template>
-  <Header />
+
+  <div class="sticky top-0 z-30 w-full">
+    <Header />
+  </div>
+
   <Articles />
-  <div class="h-2 w-full  bg-black"/>
+  <div class="h-2 w-full bg-black" />
   <Campaigns />
   <Footer />
 </template>
