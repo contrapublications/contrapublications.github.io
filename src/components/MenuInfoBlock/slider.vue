@@ -1,15 +1,13 @@
 <script setup>
-  import { ref } from "vue";
+  import { ref, defineEmits } from "vue";
 
-  const emit = defineEmits(['darkMode'])
   const darkModeToggle = ref(true);
-  
+  const emit = defineEmits(["darkMode"]);
+  emit("darkMode", darkModeToggle);
+
   function toggle() {
     darkModeToggle.value = !darkModeToggle.value;
   }
-
-  emit('darkMode', darkModeToggle)
-
 </script>
 
 <template>
@@ -32,7 +30,6 @@
     <div v-if="darkModeToggle">Light</div>
     <div v-else>Dark</div>
   </div>
-
 </template>
 
 <style scoped>
