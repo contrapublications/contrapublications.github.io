@@ -22,11 +22,11 @@
   
   <!-- Mobile -->
   <div v-if="isMobile" class="text-2xl">
-    <div class="border-b border-border-black">
+    <div class="border-b border-black dark:border-white dark:bg-black">
       <CoverImage />
     </div>
 
-    <div class="w-full pl-8">
+    <div class="w-full pl-8 dark:bg-black dark:text-white">
       <!-- top pad -->
       <div class="h-[25px]" />
       <TheGrayZone />
@@ -42,10 +42,10 @@
 
   <!-- Web -->
   <div v-else class="text-2xl">
-    <div class="flex w-full border-t border-b border-r border-border-black">
-      <div class="w-[242px] border-r border-border-black pl-8"></div>
+    <div class="flex w-full border-t border-b border-r border-black dark:border-white ">
+      <div class="w-[242px] border-r border-black dark:border-white dark:bg-black  pl-8"></div>
 
-      <div class="w-full border-r border-border-black pl-8">
+      <div class="w-full border-r border-black dark:border-white  dark:text-white dark:bg-black  pl-8">
         <!-- top pad -->
         <div class="h-[25px]" />
         <TheGrayZone />
@@ -59,7 +59,7 @@
       </div>
 
       <!-- imgae -->
-      <div class="flex w-2/3 border-r border-border-black bg-black pl-8">
+      <div class="flex w-2/3 border-r border-black dark:border-white  bg-black  dark:bg-white pl-8">
         <!-- <img class="object-contain" src="../../assets/COVID_4.png" alt="" /> -->
         <CoverImage />
       </div>

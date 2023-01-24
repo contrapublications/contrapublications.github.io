@@ -1,7 +1,6 @@
 <script setup>
   import Kevin from "./Kevin_campaign.vue";
-  //   import HorzLine from "../Articles/HorzLine.vue";
-
+  
   import { useMedia } from "../../composables/useMedia";
   import { ref, computed } from "vue";
 
@@ -18,26 +17,26 @@
 <template>
 
   <!-- Mobile -->
-  <div v-if="isMobile" class="text-2xl">
+  <div v-if="isMobile" class="text-2xl bg-white dark:bg-black">
     <div class="m-0 flex flex-wrap place-content-center">
-      <div class="border-l border-b border-border-black">
+      <div class="border-l border-b border-black dark:border-white">
         <Kevin />
       </div>
 
-      <div class="border-l border-b border-border-black">
+      <div class="border-l border-b border-black dark:border-white">
         <Kevin />
       </div>
     </div>
   </div>
 
   <!-- Web -->
-  <div v-else class="text-2xl">
+  <div v-else class="text-2xl  bg-white dark:bg-black">
     <div class="m-0 flex flex-wrap place-content-center">
-      <div class="border-l border-r border-border-black">
+      <div class="border-l border-r border-black dark:border-white">
         <Kevin />
       </div>
 
-      <div class="border-r border-border-black">
+      <div class="border-r border-black dark:border-white">
         <Kevin />
       </div>
     </div>

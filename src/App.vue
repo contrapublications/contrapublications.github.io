@@ -19,7 +19,7 @@
   </div>
 
   <Articles />
-  <div class="h-2 w-full bg-black"  />
+  <div class="h-2 w-full bg-black dark:bg-white"  />
   <Campaigns />
   <Footer />
 </template>
