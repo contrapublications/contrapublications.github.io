@@ -7,6 +7,10 @@
   import { useMedia } from "../../composables/useMedia";
   import { ref, computed } from "vue";
 
+  import { useDarkMode } from "../../Stores/darkMode";
+
+  
+  const darkMode = ref(useDarkMode())
   const isMobile = useMedia("(max-width: 800px)");
 
   const layout = computed(() => {
@@ -15,6 +19,7 @@
 </script>
 
 <template>
+
   <!-- Mobile -->
   <div v-if="isMobile" class="text-2xl">
 

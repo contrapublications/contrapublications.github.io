@@ -1,25 +1,18 @@
 <script setup>
-  import { ref, defineEmits } from "vue";
+  import { ref } from "vue";
+  import { useDarkMode } from "../../Stores/darkMode.js";
 
-  const darkModeToggle = ref(true);
-  const emit = defineEmits(["darkMode"]);
-  emit("darkMode", darkModeToggle);
-
-  function toggle() {
-    darkModeToggle.value = !darkModeToggle.value;
-  }
+  const darkMode = useDarkMode();
+  
 </script>
 
 <template>
-  <div class="text-2xl">
-    {{ darkModeToggle }}
-  </div>
-
+  
   <div class="m-0 grid h-11 grid-rows-3 p-0">
     <div class="m-0 flex w-20 place-content-center p-0">
       <div>
         <label class="switch">
-          <input type="checkbox" @click="toggle" />
+          <input type="checkbox" @click="darkMode.toggle()" />
           <span class="slider"></span>
         </label>
       </div>
@@ -27,7 +20,7 @@
   </div>
 
   <div class="m-0 flex w-20 place-content-center p-1 text-left font-favorit-bold text-base text-slate-700">
-    <div v-if="darkModeToggle">Light</div>
+    <div v-if="darkMode.mode">Light</div>
     <div v-else>Dark</div>
   </div>
 </template>

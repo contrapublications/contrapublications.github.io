@@ -5,7 +5,11 @@
   import Articles from "./components/Articles/Articles.vue";
   import Campaigns from "./components/Campaigns/Campaigns.vue";
   import Footer from "./components/Footer.vue";
+  import { useDarkMode } from "./stores/darkMode";
+  import { ref } from "vue";
 
+  const darkMode = ref(useDarkMode())
+  
 </script>
 
 <template>
@@ -15,7 +19,7 @@
   </div>
 
   <Articles />
-  <div class="h-2 w-full bg-black" />
+  <div class="h-2 w-full bg-black"  />
   <Campaigns />
   <Footer />
 </template>
