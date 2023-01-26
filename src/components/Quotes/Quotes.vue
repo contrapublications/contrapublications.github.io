@@ -27,3 +27,4 @@
   <div class="flex h-full w-full items-end text-xl ">{{ quote }}</div>
   <div class="flex h-full w-full items-end text-lg">--{{ by }}</div>
 </template>
+console.log(object);
