@@ -14,6 +14,8 @@
   const layout = computed(() => {
     return isMobile.value ? "container-mobile" : "container-web";
   });
+  
+  
 </script>
 
 <template>
@@ -25,7 +27,7 @@
     <div v-for="campaign in Campaigns.Campaigns">
       <CampaignItem 
       :title="campaign.title"
-      :imageLink="campaign.imageLink"
+      :imageLink="imageLink"
       :titleLink="campaign.titleLink"
       :subTitle="campaign.subTitle"
       :date="campaign.date"
@@ -51,7 +53,7 @@
       <div v-for="campaign in Campaigns.Campaigns">
       <CampaignItem 
       :title="campaign.title"
-      :imageLink="campaign.imageLink"
+      :imageLink="imageLink"
       :titleLink="campaign.titleLink"
       :subTitle="campaign.subTitle"
       :date="campaign.date"
