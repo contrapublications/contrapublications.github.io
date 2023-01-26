@@ -1,7 +1,7 @@
 <script setup>
   import Slider from "./slider.vue";
   import Quotes from "../Quotes/Quotes.vue";
-  import { ref, defineEmits } from "vue";
+  import { ref } from "vue";
 
   const currentDate = new Date();
   const cDay = currentDate.getDate();

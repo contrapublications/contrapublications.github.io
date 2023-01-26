@@ -14,16 +14,24 @@
   const layout = computed(() => {
     return isMobile.value ? "container-mobile" : "container-web";
   });
+
+  const goo = ref('')
+
 </script>
 
 <template>
 
   <!-- Mobile -->
-  <div v-if="isMobile" class="text-2xl">
-    <div class="h-30 flex w-full flex-row border-b border-r border-border-black bg-white dark:bg-black">
-      <HamburgerButton />
+  <div v-if="isMobile" class="text-2xl" >
+    <div  class="h-30 flex w-full flex-row border-b border-r border-border-black bg-white dark:bg-black">
+      <HamburgerButton  />
       <img v-if="darkMode.mode" class="w-80 self-end justify-self-end" src="../../assets/contra_logo_black.svg" alt="" />
       <img v-else class="w-80 self-end justify-self-end" src="../../assets/contra_logo_white.svg" alt="" />
+
+      <div>
+        {{ goo }}    
+      </div>
+
     </div>
   </div>
 

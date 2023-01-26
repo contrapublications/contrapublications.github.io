@@ -9,6 +9,7 @@
 
 #root{
   --border-black: #475569;
+  --contra: #ff4b4c;
 }
 
   #app{
@@ -17,7 +18,7 @@
     color: black;
 }
 
-a,
+/* a,
 .green {
   text-decoration: none;
   color: black;
@@ -29,6 +30,10 @@ a,
     background-color: hsla(160, 100%, 37%, 0.2);
     padding: 20px;
   }
+} */
+
+.hover-article{
+  @apply  hover:bg-contra transition duration-500 hover:scale-105;
 }
 
 @font-face {

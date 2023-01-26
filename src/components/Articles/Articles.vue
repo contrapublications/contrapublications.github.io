@@ -1,9 +1,8 @@
 <script setup>
   import CoverImage from "./CoverImage.vue";
-  import TheGrayZone from "./TheGrayZone.vue";
-  import Cocoon from "./Cocoon.vue";
-  import EyeCandy from "./EyeCandy.vue";
-  import HorzLine from "./HorzLine.vue";
+  import AtricleItem from "./AtricleItem.vue";
+  
+  import Columns from "../../Data/columns";
 
   import { useMedia } from "../../composables/useMedia";
   import { ref, computed } from "vue";
@@ -16,10 +15,10 @@
   const layout = computed(() => {
     return isMobile.value ? "container-mobile" : "container-web";
   });
+
 </script>
 
 <template>
-  
   <!-- Mobile -->
   <div v-if="isMobile" class="text-2xl">
     <div class="border-b border-black dark:border-white dark:bg-black">
@@ -27,40 +26,43 @@
     </div>
 
     <div class="w-full pl-8 dark:bg-black dark:text-white">
-      <!-- top pad -->
-      <div class="h-[25px]" />
-      <TheGrayZone />
-      <HorzLine />
-      <Cocoon />
-      <HorzLine />
-      <EyeCandy />
 
-      <!-- bottom pad -->
-      <div class="h-[20px]" />
+      <div class="w-full border-r border-black pl-8 dark:border-white dark:bg-black dark:text-white">
+        <div v-for="columns in Columns.Columns">
+          <!-- top pad -->
+          <div class="h-[25px]" />
+
+          <AtricleItem :column="columns.column" :columnLink="columns.columnLink" :title="columns.title" :author="columns.author" :authorLink="columns.authorLink" :twitterHandle="columns.twitterHandle" :twitterHandleLink="columns.twitterHandleLink" />
+
+          <!-- bottom pad -->
+          <div class="h-[20px]" />
+        </div>
+
+      </div>
+
     </div>
   </div>
 
   <!-- Web -->
   <div v-else class="text-2xl">
-    <div class="flex w-full border-t border-b border-r border-black dark:border-white ">
-      <div class="w-[242px] border-r border-black dark:border-white dark:bg-black  pl-8"></div>
+    <div class="flex w-full border-t border-b border-r border-black dark:border-white">
+      <div class="w-[242px] border-r border-black pl-8 dark:border-white dark:bg-black"></div>
 
-      <div class="w-full border-r border-black dark:border-white  dark:text-white dark:bg-black  pl-8">
-        <!-- top pad -->
-        <div class="h-[25px]" />
-        <TheGrayZone />
-        <HorzLine />
-        <Cocoon />
-        <HorzLine />
-        <EyeCandy />
+      <div class="w-full border-r border-black pl-8 dark:border-white dark:bg-black dark:text-white">
+        <div v-for="columns in Columns.Columns">
+          <!-- top pad -->
+          <div class="h-[25px]" />
 
-        <!-- bottom pad -->
-        <div class="h-[20px]" />
+          <AtricleItem :column="columns.column" :columnLink="columns.columnLink" :title="columns.title" :author="columns.author" :authorLink="columns.authorLink" :twitterHandle="columns.twitterHandle" :twitterHandleLink="columns.twitterHandleLink" />
+
+          <!-- bottom pad -->
+          <div class="h-[20px]" />
+        </div>
+
       </div>
 
       <!-- imgae -->
-      <div class="flex w-2/3 border-r border-black dark:border-white  bg-black  dark:bg-white pl-8">
-        <!-- <img class="object-contain" src="../../assets/COVID_4.png" alt="" /> -->
+      <div class="flex w-2/3 border-r border-black bg-black pl-8 dark:border-white dark:bg-white">
         <CoverImage />
       </div>
     </div>

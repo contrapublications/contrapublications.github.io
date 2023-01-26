@@ -15,7 +15,8 @@ module.exports = {
         'favorit-mono': ['Favorit-mono', 'serif'],
       },
       colors:{
-        "border-black": "var(--border-black) "
+        "border-black": "#475569 ",
+        "contra": "#ff4b4c",
       },
     },
   },

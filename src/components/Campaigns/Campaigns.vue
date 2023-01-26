@@ -1,5 +1,7 @@
 <script setup>
-  import Kevin from "./Kevin_campaign.vue";
+  import CampaignItem from "./CampaignItem.vue";
+
+  import Campaigns from "../../Data/campaigns";
   
   import { useMedia } from "../../composables/useMedia";
   import { ref, computed } from "vue";
@@ -18,7 +20,19 @@
 
   <!-- Mobile -->
   <div v-if="isMobile" class="text-2xl bg-white dark:bg-black">
-    <div class="m-0 flex flex-wrap place-content-center">
+
+
+    <div v-for="campaign in Campaigns.Campaigns">
+      <CampaignItem 
+      :title="campaign.title"
+      :imageLink="campaign.imageLink"
+      :titleLink="campaign.titleLink"
+      :subTitle="campaign.subTitle"
+      :date="campaign.date"
+      />
+    </div>
+    
+    <!-- <div class="m-0 flex flex-wrap place-content-center">
       <div class="border-l border-b border-black dark:border-white">
         <Kevin />
       </div>
@@ -26,19 +40,32 @@
       <div class="border-l border-b border-black dark:border-white">
         <Kevin />
       </div>
-    </div>
+    </div> -->
+
   </div>
 
   <!-- Web -->
   <div v-else class="text-2xl  bg-white dark:bg-black">
     <div class="m-0 flex flex-wrap place-content-center">
-      <div class="border-l border-r border-black dark:border-white">
-        <Kevin />
+
+      <div v-for="campaign in Campaigns.Campaigns">
+      <CampaignItem 
+      :title="campaign.title"
+      :imageLink="campaign.imageLink"
+      :titleLink="campaign.titleLink"
+      :subTitle="campaign.subTitle"
+      :date="campaign.date"
+      />
       </div>
 
-      <div class="border-r border-black dark:border-white">
+      <!-- <div class="border-l border-r border-black dark:border-white">
         <Kevin />
-      </div>
+      </div> -->
+
+      <!-- <div class="border-r border-black dark:border-white">
+        <Kevin />
+      </div> -->
+
     </div>
   </div>
 </template>

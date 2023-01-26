@@ -8,18 +8,15 @@
   import { useDarkMode } from "./stores/darkMode";
   import { ref } from "vue";
 
-  const darkMode = ref(useDarkMode())
-  
+  const darkMode = ref(useDarkMode());
 </script>
 
 <template>
-
   <div class="sticky top-0 z-30 w-full">
     <Header />
   </div>
-
   <Articles />
-  <div class="h-2 w-full bg-black dark:bg-white"  />
+  <div class="h-2 w-full bg-black dark:bg-white" />
   <Campaigns />
   <Footer />
 </template>
