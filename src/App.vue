@@ -26,7 +26,7 @@
   <Articles />
   <div class="h-2 w-full bg-black dark:bg-white" />
   <Campaigns />
-  <Spacer class="max-h-full" />
+  <!-- <Spacer class="max-h-full" /> -->
   <Footer />
 
   <div :class="animClass">
