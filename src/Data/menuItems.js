@@ -24,6 +24,7 @@ const MenuItems  = Object.freeze({
 		'title':"Subscribe",
 		"titleLink":"https://contrapublications.substack.com/",
 	},
+
 })
 
 export default {MenuItems}
