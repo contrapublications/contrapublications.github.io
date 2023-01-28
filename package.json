@@ -11,7 +11,8 @@
     "@vueuse/core": "^9.11.1",
     "jquery": "^3.6.0",
     "pinia": "^2.0.29",
-    "vue": "^3.2.45"
+    "vue": "^3.2.45",
+    "vue-cookie": "^1.1.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",

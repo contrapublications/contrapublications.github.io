@@ -26,60 +26,60 @@
   <Articles />
   <div class="h-2 w-full bg-black dark:bg-white" />
   <Campaigns />
+  <Spacer class="max-h-full" />
   <Footer />
 
   <div :class="animClass">
-        <div>
-            <div class="logo_container">
-                <img alt="flag" class="logo" src="./assets/contra_logo_white.svg" />
-            </div>
-        </div>
+    <div>
+      <div class="logo_container">
+        <img alt="flag" class="logo" src="./assets/contra_logo_white.svg" />
+      </div>
     </div>
+  </div>
 </template>
 
 <style scoped>
-.logo {
-    width: 30%
-}
-.logo_container {
+  .logo {
+    width: 30%;
+  }
+  .logo_container {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-}
-.wtf {
+  }
+  .wtf {
     width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
     position: fixed;
     display: flex;
-}
+  }
 
-.wtf div {
+  .wtf div {
     width: 100%;
     height: 100%;
     background: black;
     animation: up 3s ease-in forwards;
     transform: scaleY(0);
     /* background: rgb(211, 34, 3); */
-}
+  }
 
-@keyframes up {
-
+  @keyframes up {
     100% {
-        transform-origin: top;
-        /* transform: scaleY(0);*/
-        transform: translateY(100%);
+      transform-origin: top;
+      /* transform: scaleY(0);*/
+      transform: translateY(100%);
     }
 
     0% {
-        transform-origin: bottom;
-        /* transform: scaleY(1); */
-        transform: translateY(-0%);
+      transform-origin: bottom;
+      /* transform: scaleY(1); */
+      transform: translateY(-0%);
     }
-}
+  }
 
-.hide {
+  .hide {
     visibility: hidden;
-}
+  }
 </style>

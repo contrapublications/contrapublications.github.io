@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+// import VueCookies from 'vue-cookies'
 
 import App from './App.vue'
 // import App from './Test.vue'
@@ -14,6 +15,7 @@ const pinia = createPinia()
 const app = createApp(App)
 
 app.use(pinia)
+// Vue.use(VueCookies, { expires: '7d'})
 app.mount('#app')
 
 // if pinia is remove used this init
