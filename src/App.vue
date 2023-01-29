@@ -44,7 +44,7 @@
         </div>
       </div>
     </div>
-    <Footer class="fixed top-0 z-30 w-full" />
+    <Footer class="fixed bottom-0 z-30 w-full" />
   </div>
 </template>
 
