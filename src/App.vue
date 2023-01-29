@@ -6,35 +6,45 @@
   import Campaigns from "./components/Campaigns/Campaigns.vue";
   import Footer from "./components/Footer.vue";
   import { useDarkMode } from "./stores/darkMode";
-  import { ref, onMounted } from "vue";
+  import { ref, onMounted, onBeforeUnmount } from "vue";
 
   const darkMode = ref(useDarkMode());
   const animClass = ref("wtf");
 
   onMounted(() => {
     setTimeout(function () {
-      animClass.value = "hide";
+      animClass.value = "hide";``
       console.log("WELCOME: Carolingian Royalty Registery");
     }, 3000);
   });
+
+  onBeforeUnmount(() => {
+    window.localStorage.clear()
+  });
+  
+
 </script>
 
 <template>
   <div class="sticky top-0 z-30 w-full">
     <Header />
   </div>
-  <Articles />
-  <div class="h-2 w-full bg-black dark:bg-white" />
-  <Campaigns />
-  <!-- <Spacer class="max-h-full" /> -->
-  <Footer />
 
-  <div :class="animClass">
-    <div>
-      <div class="logo_container">
-        <img alt="flag" class="logo" src="./assets/contra_logo_white.svg" />
+  <Articles />
+
+  <div class="h-2 w-full bg-black dark:bg-white" />
+
+  <Campaigns />
+
+  <div class="bg-white dark:bg-black">
+    <div :class="animClass">
+      <div>
+        <div class="logo_container">
+          <img alt="flag" class="logo" src="./assets/contra_logo_white.svg" />
+        </div>
       </div>
     </div>
+    <Footer class="fixed top-0 z-30 w-full" />
   </div>
 </template>
 
